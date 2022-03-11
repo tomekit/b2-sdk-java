@@ -5,7 +5,7 @@
 package com.backblaze.b2.client.webApiHttpClient;
 
 import com.backblaze.b2.client.exceptions.B2Exception;
-import org.apache.http.impl.client.CloseableHttpClient;
+import cz.msebera.android.httpclient.impl.client.CloseableHttpClient;
 
 public interface HttpClientFactory extends AutoCloseable {
 

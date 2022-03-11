@@ -6,19 +6,19 @@ package com.backblaze.b2.client.webApiHttpClient;
 
 import com.backblaze.b2.client.exceptions.B2Exception;
 import com.backblaze.b2.util.B2Preconditions;
-import org.apache.http.client.config.RequestConfig;
-import org.apache.http.config.Registry;
-import org.apache.http.config.RegistryBuilder;
-import org.apache.http.conn.HttpClientConnectionManager;
-import org.apache.http.conn.socket.ConnectionSocketFactory;
-import org.apache.http.conn.socket.PlainConnectionSocketFactory;
-import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
-import org.apache.http.ssl.SSLContexts;
-import org.apache.http.util.VersionInfo;
+import cz.msebera.android.httpclient.client.config.RequestConfig;
+import cz.msebera.android.httpclient.config.Registry;
+import cz.msebera.android.httpclient.config.RegistryBuilder;
+import cz.msebera.android.httpclient.conn.HttpClientConnectionManager;
+import cz.msebera.android.httpclient.conn.socket.ConnectionSocketFactory;
+import cz.msebera.android.httpclient.conn.socket.PlainConnectionSocketFactory;
+import cz.msebera.android.httpclient.conn.ssl.SSLConnectionSocketFactory;
+import cz.msebera.android.httpclient.impl.client.CloseableHttpClient;
+import cz.msebera.android.httpclient.impl.client.HttpClientBuilder;
+import cz.msebera.android.httpclient.impl.client.HttpClients;
+import cz.msebera.android.httpclient.impl.conn.PoolingHttpClientConnectionManager;
+import cz.msebera.android.httpclient.ssl.SSLContexts;
+import cz.msebera.android.httpclient.util.VersionInfo;
 
 import javax.net.ssl.SSLContext;
 import java.util.concurrent.TimeUnit;
@@ -50,7 +50,7 @@ public class HttpClientFactoryImpl implements HttpClientFactory {
      * manually set the userAgent from the resulting constant.
      */
     private static final String APACHE_HTTP_CLIENT_USER_AGENT = VersionInfo.getUserAgent("Apache-HttpClient",
-            "org.apache.http.client", HttpClientBuilder.class);
+            "cz.msebera.android.httpclient.client", HttpClientBuilder.class);
 
 
     private HttpClientFactoryImpl(HttpClientConnectionManager connectionManager,
